@@ -38,7 +38,7 @@ The server should return the contents of the first paragraph of the correspondin
 
 `{ scrapeDate: number, articleName: string, introduction: string}`
 
-Where the scrapeDate is the date when the request was made, in the format of UNIX epoch (milliseconds since 1970/01/01 00:00 UTC).
+Where the scrapeDate is the date when the request was made, in the format of <a href="https://www.epochconverter.com/">UNIX epoch</a> (milliseconds since 1970/01/01 00:00 UTC).
 
 For example, if I make a `GET` request to `/introduction/cat`, I should receive a response that looks roughly like this:
 
