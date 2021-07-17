@@ -25,6 +25,7 @@ Good luck!
 You will create a REST server that returns information from the Wikipedia website.
 
 Your server must run locally on port 3000. Our tests expect such a server to be up and running.
+**Please provide instructions for how to run your server from your source code** (e.g `pip install && PORT=3000 python server.py`).
 
 This exercise consists of parts. Make sure you're completely done with each part before moving on to the next. As a tip, you're advised to make a different commit/branch for every part to make sure you have a stable, working version for each part.
 
@@ -49,7 +50,7 @@ For example, if I make a `GET` request to `/introduction/cat`, I should receive 
 }
 ```
 
-You mainly only accept article names that are comprised of letters, hyphens (`-`), underscores (`_`) and numbers. Any input that does not comply with this request should be rejected with a Bad Request response and a proper explanation for the rejection.
+You main only accept article names that are comprised of letters, hyphens (`-`), underscores (`_`) and numbers. Any input that does not comply with this request should be rejected with a Bad Request response and a proper explanation for the rejection.
 
 ### Part B
 We want to add a language functionality to the server. Requests may arrive with a standard `Accept-Language` header. Make sure you respect that header and fetch the article in the correct language. For example, if I want the French article for Cat, I would send a GET request to `/introduction/chat` with the header `Accept-language: fr`.
@@ -71,8 +72,14 @@ The token should be a random, hard to guess string.
 Add support for authentication with a token to the `GET` endpoint:
 The server should look at the `x-authentication` header. If the header exists, the server should take the header's value and check if it's a valid token. If so, it should make the `GET` request using the user's favorite language.
 
-#### Bonus - Part D
+### Bonus - Part D
+You may choose between any of the following bonus parts:
+
+#### Bonus 1
 Implement very simple web UI that allows signing up new users and fetching article introductions as those users.
 It should have 2 parts:
 1. A signup form with a username and language fields
 2. A "Fetch article introduction" form that has a mandatory "article name" field, and optional "token", "language" fields.
+
+#### Bonus 2
+Implement a caching mechanism. If a requested article was already fetched in the past 5 minutes, return the same result.
