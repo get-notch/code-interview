@@ -25,7 +25,7 @@ Good luck!
 You will create a REST server that returns information from the Wikipedia website.
 
 Your server must run locally on port 3000. Our tests expect such a server to be up and running.
-**Please provide instructions for how to run your server from your source code** (e.g `pip install && PORT=3000 python server.py`).
+**Please provide instructions for how to run your server from your source code** (e.g `npm install && tsc && PORT=3000 node dist`).
 
 This exercise consists of parts. Make sure you're completely done with each part before moving on to the next. As a tip, you're advised to make a different commit/branch for every part to make sure you have a stable, working version for each part.
 
